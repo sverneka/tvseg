@@ -18,9 +18,9 @@ $ python sample_frames.py
 # Run create_dataset.py
 This creates numpy arrays in the format needed to train siamese network by randomly creating pairs from sampled frames.
 
-It saves these numpy arrays into numpy train_X_64.py and train_Y_64.py
+It saves these numpy arrays into files train_X_64.npy and train_Y_64.npy
 
-Note: You need 12GB memory to create this, if you don't have enough memory, modify create_dataset.py to create smaller dataset.
+Note: You need 12GB memory to run this, if you don't have enough memory, modify create_dataset.py to create a smaller dataset.
 
 ```bash
 $ python create_dataset.py
@@ -37,62 +37,8 @@ $ python siamese_net.py
 
 # Run boundary_detector.py
 It runs through all the videos in "videos" folder and puts boundary images into "detected_boundaries/[video_name]" folder.
-Boundary images are named by their frame number.
+Boundary images are named by their frame numbers.
 
 ```bash
 $ python boundary_detector.py
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
