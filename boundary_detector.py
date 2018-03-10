@@ -64,6 +64,7 @@ def is_boundary(pred_a, pred_b):
     return False
 
 
+# Run through all the videos in "videos" folder and puts boundary images into "detected_boundaries/[video_name]" folder.
 boundaries = []
 i=1
 detection_fldr = 'detected_boundaries/'

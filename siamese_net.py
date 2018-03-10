@@ -90,7 +90,7 @@ def compute_accuracy(predictions, labels):
     return np.where(labels == np.array([ int(i<0.5) for i in predictions]))[0].shape[0]*1.0/len(labels)
 
 
-nb_epoch = 20
+nb_epoch = 5
 
 
 # network definition
@@ -119,7 +119,7 @@ model.compile(loss=contrastive_loss, optimizer=rms)
 
 
 
-model.fit([train_X[0,],train_X[1,]], train_Y, validation_data=([val_X[0,], val_X[1,]], val_Y), batch_size = 128, shuffle = True, epochs=20)
+model.fit([train_X[0,],train_X[1,]], train_Y, validation_data=([val_X[0,], val_X[1,]], val_Y), batch_size = 128, shuffle = True, epochs=nb_epoch)
 
 
 # compute final accuracy on training and test sets

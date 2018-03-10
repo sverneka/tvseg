@@ -34,9 +34,9 @@ $ python create_dataset.py
 ```
 
 # Run siamese_net.py
-It runs for 20 epochs and saves the model trained into model_test.h5
+It runs for 5 epochs and saves the model trained into model_test.h5
 
-It gives around 99% accuracy on train and validation data.
+It gives around 97% accuracy on train and validation data.
 
 ```bash
 $ python siamese_net.py
