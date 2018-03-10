@@ -2,6 +2,13 @@
 
 This is for GSoC-2018 project, TV Show Segmentation in collaboration with Red Hen Lab, http://www.redhenlab.org/home/the-cognitive-core-research-topics-in-red-hen/the-barnyard/tv-show-segmentation
 
+# Requirements
+python 2.7
+keras version 2.1.2 with tensorflow backend
+xlrd
+
+
+
 First put all videos to be segmented into "videos" folder.
 
 # Run sample_frames.py
