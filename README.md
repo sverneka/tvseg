@@ -35,10 +35,20 @@ It gives around 99% accuracy on train and validation data.
 $ python siamese_net.py
 ```
 
-# Run boundary_detector.py
+# To test the network on videos:  run boundary_detector.py
 It runs through all the videos in "videos" folder and puts boundary images into "detected_boundaries/[video_name]" folder.
 Boundary images are named by their frame numbers.
 
 ```bash
 $ python boundary_detector.py
 ```
+
+# Just test the provided model, model_test.h5 file
+If you don't want to create dataset and train the network, you can just use the provided model_test.h5 file to detect boundaries for videos in "videos" folder.
+
+```bash
+$ mkdir images
+$ mv boundaries images/.
+$ python boundary_detector.py
+```
+
