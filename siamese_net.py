@@ -1,3 +1,5 @@
+# siamese network modified from: https://github.com/NVIDIA/keras/blob/master/examples/mnist_siamese_graph.py
+
 import numpy as np
 seed = 1
 np.random.seed(seed)  # for reproducibility
