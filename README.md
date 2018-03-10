@@ -4,6 +4,7 @@ This is for GSoC-2018 project, TV Show Segmentation in collaboration with Red He
 
 # Requirements
 - Install python 2.7
+- Install pandas
 - Install keras version 2.1.2 with tensorflow backend
 - Install xlrd
 
@@ -59,3 +60,9 @@ $ mv boundaries images/.
 $ python boundary_detector.py
 ```
 
+# Validated boundary detection
+To test boundary detection around pre-annotated boundary frames, i.e, around boundary-500 and boundary+500 region, run boundary_detectory_fast.py. This will put boundary frames in "detected_boundaries/[video_name]/[show_name]/[begin/end]" folder.
+
+```bash
+$ python boundary_detector_fast.py
+```

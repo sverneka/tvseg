@@ -86,7 +86,7 @@ for video in glob.iglob('videos/*.mp4'):
         if(is_boundary(pred_a, pred_b)):
             boundaries[-1].append(i)
             # save boundary frame
-            cv2.imwrite(detection_fldr+str(i)+'.png',img_full)
+            cv2.imwrite(fldr_name+str(i)+'.png',img_full)
             print('boundary ', i)
         i=i+5
         if((i-1)%1000 == 0):
