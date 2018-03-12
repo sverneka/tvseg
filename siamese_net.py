@@ -68,21 +68,22 @@ def create_base_network():
     '''Base network to be shared (eq. to feature extraction).
     '''
     model = Sequential()
-    model.add(Conv2D(8, kernel_size = (3,3), border_mode='same',input_shape=(input_dim,input_dim,3), activation='relu'))
+    model.add(Conv2D(8, kernel_size = (3,3), border_mode='same',input_shape=(input_dim,input_dim,3)))
     model.add(BatchNormalization())
-    model.add(Conv2D(16, kernel_size = (3,3), activation = 'relu'))
+    model.add(Activation('relu'))
+    model.add(Conv2D(16, kernel_size = (3,3)))
     model.add(BatchNormalization())
-    model.add(Conv2D(32, kernel_size = (3,3), activation = 'relu'))
+    model.add(Activation('relu'))
+    model.add(Conv2D(32, kernel_size = (3,3)))
     model.add(BatchNormalization())
+    model.add(Activation('relu'))
     model.add(MaxPool2D((2,2)))
     model.add(Flatten())
-    model.add(Dense(64, activation='relu'))
-    model.add(Dropout(0.1))
-    model.add(BatchNormalization())
+    model.add(Dense(128, activation='relu'))
+    model.add(Dropout(0.5))
     model.add(Dense(64, activation='relu'))
     model.summary()
     return model
-
 
 def compute_accuracy(predictions, labels):
     '''Compute classification accuracy with a fixed threshold on distances.

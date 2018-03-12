@@ -61,8 +61,23 @@ $ python boundary_detector.py
 ```
 
 # Validated boundary detection
-To test boundary detection around pre-annotated boundary frames, i.e, around boundary-500 and boundary+500 region, run boundary_detectory_fast.py. This will put boundary frames in "detected_boundaries/[video_name]/[show_name]/[begin/end]" folder.
+To test boundary detection around pre-annotated boundary frames, i.e, around boundary-500 and boundary+500 region, run boundary_detectory_quick_check.py. This will put boundary frames in "detected_boundaries/[video_name]/[show_name]/[begin/end]" folder.
 
 ```bash
-$ python boundary_detector_fast.py
+$ python boundary_detector_quick_check.py
 ```
+
+
+
+# Building a binary classifier
+I just gave 2-class classifier a try that just says given a frame, if it's a boundary frame or not. As expected it didn't work, no matter what classifier you use.
+The reason being severe class imbalance, where we have very few boundary frames, and very very large set of non boundary frames.
+This type of problem is not learnable as corroborated by the paper, "Severe Class Imbalance: Why Better Algorithms Aren’t the Answer", https://webdocs.cs.ualberta.ca/~holte/Publications/ecml05.pdf
+
+To test you can run below scripts and you notice that the classifier does no better than majority classification
+
+```bash
+$ python create_classifier_dataset.py
+$ python classifier.py
+```
+
