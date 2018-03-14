@@ -86,7 +86,7 @@ Creates video annotations using YOLO from https://github.com/marvis/pytorch-yolo
 
 Install Yolo
 ```bash
-$ git clone https://github.com/marvis/pytorch-yolo2.git
+$ git clone https://github.com/sverneka/pytorch-yolo2.git
 $ cd pytorch-yolo2
 ```
 Download pre-trained YOLO weights - 80 class detection
