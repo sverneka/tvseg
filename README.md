@@ -81,3 +81,23 @@ $ python create_classifier_dataset.py
 $ python classifier.py
 ```
 
+# Run YOLO to create annotations
+Creates video annotations using YOLO from https://github.com/marvis/pytorch-yolo2.git on videos and writes annotations in "yolo_annotations/[video_file_name].txt" file in the format, [frame_no, label, box_co-ordinates{4 numbers}, prediction_confidence]
+
+Install Yolo
+```bash
+$ git clone https://github.com/marvis/pytorch-yolo2.git
+$ cd pytorch-yolo2
+```
+Download pre-trained YOLO weights - 80 class detection
+```bash
+$ wget http://pjreddie.com/media/files/yolo.weights
+```
+Copy yolo_annotate.py file from root to pytorch-yolo2
+```bash
+$ cp ../yolo_annotate.py .
+```
+Run yolo_annoate.py
+```bash
+$ python yolo_annotate.py
+```
