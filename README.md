@@ -7,7 +7,9 @@ This is for GSoC-2018 project, TV Show Segmentation in collaboration with Red He
 - Install pandas
 - Install keras version 2.1.2 with tensorflow backend
 - Install xlrd
-
+- Install pytorch
+- Install lmdb
+- Install tqdm
 
 
 First put all videos to be segmented into "videos" folder.
@@ -100,4 +102,21 @@ $ cp ../yolo_annotate.py .
 Run yolo_annoate.py
 ```bash
 $ python yolo_annotate.py
+```
+
+# Run video text detector and recognizer
+Extracts video screen text for every 10th frame in videos and puts the corresponding .txt files in VidTextExtraction folder.
+Source code modified from: https://github.com/sravya8/VideoText
+
+Since, there are 2 models, one for detection and other for recognition, I am running them separately as you can't create 2 tensorflow sessions on single GPU through the same process.
+
+First detect text in videos and put the bounding boxes in pickle format in VidTextExtraction folder
+```bash
+$ cd VideoText
+$ python videotextdetect.py
+```
+
+Run videotextrecognize.py to read the bounding boxes from pickle files and recognize text from videos and put them into .txt files in VidTextExtraction folder
+```bash
+$ python videotextrecogize.py
 ```
