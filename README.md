@@ -118,5 +118,5 @@ $ python videotextdetect.py
 
 Run videotextrecognize.py to read the bounding boxes from pickle files and recognize text from videos and put them into .txt files in the format [frame_number, text], in VidTextExtraction folder
 ```bash
-$ python videotextrecogize.py
+$ python videotextrecognize.py
 ```
